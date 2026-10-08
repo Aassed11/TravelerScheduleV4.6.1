@@ -1,0 +1,36 @@
+TRAVELER Schedule 업로드 키 생성 예시 (Windows)
+
+중요:
+- 이 키는 절대 GitHub 저장소에 업로드하지 마세요.
+- .jks 파일과 비밀번호를 각각 안전하게 백업하세요.
+- 아래 명령의 비밀번호는 예시가 아니라 직접 입력해야 합니다.
+
+1) PowerShell 또는 명령 프롬프트에서 keytool 위치 확인:
+   keytool -help
+
+2) 업로드 키 생성:
+   keytool -genkeypair -v ^
+     -keystore traveler-upload.jks ^
+     -alias traveler-upload ^
+     -keyalg RSA ^
+     -keysize 4096 ^
+     -validity 10000
+
+3) 인증서 지문 확인:
+   keytool -list -v -keystore traveler-upload.jks -alias traveler-upload
+
+4) Base64 변환 (PowerShell):
+   [Convert]::ToBase64String([IO.File]::ReadAllBytes("traveler-upload.jks")) | Set-Content -NoNewline traveler-upload.base64.txt
+
+5) GitHub 저장소 > Settings > Secrets and variables > Actions 에 아래 4개 Secret 생성:
+   TRAVELER_KEYSTORE_BASE64      = traveler-upload.base64.txt 전체 내용
+   TRAVELER_KEYSTORE_PASSWORD    = 키스토어 비밀번호
+   TRAVELER_KEY_ALIAS            = traveler-upload
+   TRAVELER_KEY_PASSWORD         = 키 비밀번호
+
+6) Actions > Build Signed Release APK and AAB > Run workflow
+
+완료되면 Artifacts에:
+- TravelerSchedule-V4.6.2-release-apk
+- TravelerSchedule-V4.6.2-play-aab
+가 생성됩니다.

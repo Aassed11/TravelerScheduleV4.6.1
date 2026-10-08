@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "897831040120",
+    "project_id": "travelerschedule-107c8",
+    "storage_bucket": "travelerschedule-107c8.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:897831040120:android:a0d3ed2e95ec26138be98d",
+        "android_client_info": {
+          "package_name": "com.traveler.schedule"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "897831040120-05hc4gv7pgfimhk3g8i8tvjmnag7sh8h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.traveler.schedule",
+            "certificate_hash": "70c42f7e1835ce8f41ebe5e57e3e341fe3d27be7"
+          }
+        },
+        {
+          "client_id": "897831040120-m3q7mu7ve8q62t975fuf5vhcblda1p0t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNwLQOqo1qA1QSMIWdHiG5QMrOG7DvCeI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "897831040120-m3q7mu7ve8q62t975fuf5vhcblda1p0t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

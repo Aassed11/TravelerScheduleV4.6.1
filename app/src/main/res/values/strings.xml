@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">트래블러 스케줄</string>
+    <string name="widget_month_description">TRAVELER 월간 일정 위젯</string>
+    <string name="widget_upcoming_description">TRAVELER 다가오는 일정 위젯</string>
+</resources>

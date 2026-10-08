@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.TravelerSchedule" parent="android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <!-- 앱 실행 직후 흰색 플래시가 보이지 않도록 시작 배경을 검정으로 고정 -->
+        <item name="android:windowBackground">#000000</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        <item name="android:navigationBarColor">#000000</item>
+        <item name="android:statusBarColor">#000000</item>
+    </style>
+</resources>
